@@ -45,8 +45,6 @@ const Profile = () => {
       console.error(e);
     }
   };
-    const loggedIn = Auth.loggedIn();
-
 
 
     return (

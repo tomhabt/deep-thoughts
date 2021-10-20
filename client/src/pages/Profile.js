@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ThoughtList from '../components/ThoughtList/thoughtList';
 import FriendList from '../components/FriendList/FriendList';
 import ThoughtForm from '../components/ThoughtForm/ThoughtForm';
@@ -10,7 +10,8 @@ import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 const Profile = () => {
-
+  
+  const [button, setButton] = useState('Add as Friend')
   const [addFriend] = useMutation(ADD_FRIEND);
   const { username: userParam } = useParams();
 
@@ -27,7 +28,19 @@ const Profile = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+  
+  const handleClick = async () => {
+    try {
+      await addFriend({
+        variables: { id: user._id }
+      });
+      setButton('Already a Friend')
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
+  
   if (!user?.username) {
     return (
       <h4>
@@ -36,15 +49,6 @@ const Profile = () => {
     );
   }
 
-  const handleClick = async () => {
-    try {
-      await addFriend({
-        variables: { id: user._id }
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  };
 
 
     return (
@@ -55,11 +59,11 @@ const Profile = () => {
         </h2>
         
 
-        {userParam && (
+        {(userParam) &&  Auth.loggedIn() && user.username  &&
           <button className="btn ml-auto" onClick={handleClick}>
-            Add Friend
-          </button>
-  )}
+           {button}
+          </button>}
+  
         </div> 
 
         <div className="flex-row justify-space-between mb-3">

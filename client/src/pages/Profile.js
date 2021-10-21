@@ -34,7 +34,7 @@ const Profile = () => {
       await addFriend({
         variables: { id: user._id }
       });
-      setButton('Already a Friend')
+      setButton('Freind Added')
     } catch (e) {
       console.error(e);
     }
@@ -59,7 +59,7 @@ const Profile = () => {
         </h2>
         
 
-        {(userParam) &&  Auth.loggedIn() && user.username  &&
+        {(userParam) &&  Auth.loggedIn()  &&
           <button className="btn ml-auto" onClick={handleClick}>
            {button}
           </button>}

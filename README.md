@@ -29,6 +29,8 @@ To mention few technologies been used and how they were implemeneting,
 The following screenshots of the application illustrates the different level of the project. 
 
 ![Screenshot](https://user-images.githubusercontent.com/84083304/147854268-7d04a821-e14a-449f-a315-815617747c3f.png)
+![Screenshot](https://user-images.githubusercontent.com/84083304/147854271-2c2ac3a3-92b5-49a0-84da-375a067fb849.png)
+![Screenshot](https://user-images.githubusercontent.com/84083304/147854273-9d696844-635c-48ae-a242-47dbdd960e89.png)
 
 
 ## Table of Contents

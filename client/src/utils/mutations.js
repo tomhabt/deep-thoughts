@@ -14,17 +14,27 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+  mutation addUser(
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $username: String!
+    $password: String!
+  ) {
+    addUser(
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      username: $username
+      password: $password
+    ) {
       token
       user {
         _id
-        username
-        email
       }
     }
   }
-  `;
+`;
 
   export const ADD_FRIEND = gql`
   mutation addFriend($id: ID!) {

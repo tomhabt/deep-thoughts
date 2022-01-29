@@ -1,15 +1,14 @@
-# deep-thoughts
+# Deep Thoughts - A Social Media App.
 
 Application Link: https://deep-thoughts-pro.herokuapp.com/
-Repository link:https://github.com/tomhabt/deep-thoughts.git
 
 ## Description
 
-This application is to build  a social media application called "Deep Thoughts," where users can create an account, post their thoughts for others to see, and interact with other users through these thoughts:
-This app (Deep Thoughts) involved a large codebase that combined a lot of new technologies.
+This application is to build  a social media application called "Deep Thoughts," where users can create an account, post their thoughts for others to see, and interact with other users through these thoughts: This app (Deep Thoughts) involved a large codebase that combined a lot of new technologies.
 To mention few technologies been used and how they were implemeneting,
 
 * Manually read and write to the Apollo Client cache.
+
 * Integrate the Apollo Server GraphQL library to handle data requests.
 
 * Build both query type definitions and resolvers for retrieving data from a MongoDB database.
